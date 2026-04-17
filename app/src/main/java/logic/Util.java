@@ -29,9 +29,7 @@ public class Util {
 
     public static void setCurrentQuantity(String name){
         currentQuantity = getQuantityObjects(name);
-        leftForm.unit.getItems().clear();
-        leftForm.unit.getItems().addAll(currentQuantity.getUnit());
-        rightForm.unit.getItems().clear();
-        rightForm.unit.getItems().addAll(currentQuantity.getUnit());
+        leftForm.update(currentQuantity.getUnit());
+        rightForm.update(currentQuantity.getUnit());
     }
 }
