@@ -1,17 +1,13 @@
 package quantity;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javafx.scene.control.ComboBox;
 
 abstract public class Quantity {
-    final private Map<String, Double> factor;
-    final private ComboBox<String> unit;
-
-    public Quantity(Map<String, Double> factor, ComboBox<String> unit){
-        this.factor = factor;
-        this.unit = unit;
-    }
+    final protected Map<String, Double> factor = new HashMap<String,Double>();;
+    final protected ComboBox<String> unit = new ComboBox<String>();;
 
     public double getFactor(String unit){
         return factor.get(unit);
