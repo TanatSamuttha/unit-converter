@@ -16,4 +16,8 @@ abstract public class Quantity {
     public double getFactor(String unit){
         return factor.get(unit);
     }
+
+    public ComboBox<String> getUnit(){
+        return unit;
+    }
 }
