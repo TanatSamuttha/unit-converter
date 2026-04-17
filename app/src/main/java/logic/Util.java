@@ -2,6 +2,7 @@ package logic;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import quantity.Length;
 import quantity.Quantity;
@@ -12,5 +13,9 @@ public class Util {
     public static void initialize(){
         quantityMap = new HashMap<String, Quantity>();
         quantityMap.put("Length", new Length());
+    }
+
+    public static Set<String> getQuantities(){
+        return quantityMap.keySet();
     }
 }
