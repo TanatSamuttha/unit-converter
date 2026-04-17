@@ -13,7 +13,8 @@ public class Main extends Application{
         Util.initialize();
         HBox root = new HBox();
         root.setPadding(new Insets(10));
-        root.getChildren().add(new QuantityDropdown());
+        QuantityDropdown quantityDropdown =  new QuantityDropdown();
+        root.getChildren().addAll(quantityDropdown, Util.leftForm, Util.rightForm);
         Scene scene = new Scene(root, 422, 322);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Unit Converter");

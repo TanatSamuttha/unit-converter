@@ -7,7 +7,12 @@ public class Length extends Quantity {
         factor.put("Inch", 39.3701);
         factor.put("Feet", 3.28084);
         for(String unitName : factor.keySet()){
-            unit.getItems().add(unitName);
+            unit.add(unitName);
         }
+    }
+
+    @Override
+    public String toString(){
+        return "Length";
     }
 }
