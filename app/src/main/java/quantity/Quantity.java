@@ -12,4 +12,8 @@ abstract public class Quantity {
         this.factor = factor;
         this.unit = unit;
     }
+
+    public double getFactor(String unit){
+        return factor.get(unit);
+    }
 }
