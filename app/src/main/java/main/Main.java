@@ -6,9 +6,11 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import logic.Util;
 
 public class Main extends Application{
     public void start(Stage primaryStage){
+        Util.initialize();
         HBox root = new HBox();
         root.setPadding(new Insets(10));
         root.getChildren().add(new QuantityDropdown());
