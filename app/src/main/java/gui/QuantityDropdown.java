@@ -2,26 +2,28 @@ package gui;
 
 
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import javafx.scene.control.ComboBox;
 import quantity.Length;
 import quantity.Quantity;
+import quantity.Weight;
 
 public class QuantityDropdown extends ComboBox<String>{
 
-    private static Map<String, Quantity> quantityMap = new HashMap<String, Quantity>();
+    private static Map<String, Quantity> quantityMap = new LinkedHashMap<String, Quantity>();
     private static final Length length = new Length();
+    private static final Weight weight = new Weight();
     private static Quantity currentQuantity;
     private FormPane formPane;
 
     public QuantityDropdown(FormPane formPane){
         this.formPane = formPane;
         quantityMap.put("Length", length);
+        quantityMap.put("Weight", weight);
 
         String[] quantities = getQuantityNames();
-        Arrays.sort(quantities);
         for(String quantityName : quantities){
             getItems().add(quantityName);
         }
