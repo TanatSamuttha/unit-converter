@@ -14,7 +14,7 @@ public class QuantityDropdown extends ComboBox<String>{
     private static Map<String, Quantity> quantityMap = new HashMap<String, Quantity>();
     private static final Length length = new Length();
     private static Quantity currentQuantity;
-    private static FormPane formPane;
+    private FormPane formPane;
 
     public QuantityDropdown(FormPane formPane){
         this.formPane = formPane;
@@ -43,7 +43,7 @@ public class QuantityDropdown extends ComboBox<String>{
         return quantityMap.get(name);
     }
 
-    public static void setCurrentQuantity(String name){
+    public void setCurrentQuantity(String name){
         currentQuantity = getQuantityObjects(name);
         formPane.update(currentQuantity.getUnit());
     }
