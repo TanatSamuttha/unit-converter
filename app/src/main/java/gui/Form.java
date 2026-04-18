@@ -11,7 +11,6 @@ public class Form extends VBox {
     public TextField field = new TextField();
 
     public Form(){
-        unit.getItems().add("test");
         getChildren().addAll(unit, field);
     }
 
@@ -19,5 +18,10 @@ public class Form extends VBox {
         this.unit.getItems().clear();
         this.unit.getItems().addAll(unit);
         this.unit.setValue(unit.get(0));
+        field.clear();
+    }
+
+    public String getCurrentUnit(){
+        return unit.getValue();
     }
 }
