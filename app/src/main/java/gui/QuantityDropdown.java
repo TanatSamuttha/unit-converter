@@ -47,4 +47,8 @@ public class QuantityDropdown extends ComboBox<String>{
         currentQuantity = getQuantityObjects(name);
         formPane.update(currentQuantity.getUnit());
     }
+
+    public static double getFactor(String unit){
+        return currentQuantity.getFactor(unit);
+    }
 }
