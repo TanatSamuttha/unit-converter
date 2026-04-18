@@ -17,10 +17,18 @@ public class FormPane extends HBox {
             }
         });
 
+        leftForm.unit.setOnAction(e -> {
+            updateValue(rightForm, leftForm);
+        });
+
         rightForm.field.textProperty().addListener(e -> {
             if(rightForm.field.isFocused()){
                 updateValue(rightForm, leftForm);
             }
+        });
+
+        rightForm.unit.setOnAction(e -> {
+            updateValue(leftForm, rightForm);
         });
     }
 

@@ -18,6 +18,7 @@ public class Form extends VBox {
         this.unit.getItems().clear();
         this.unit.getItems().addAll(unit);
         this.unit.setValue(unit.get(0));
+        field.clear();
     }
 
     public String getCurrentUnit(){
